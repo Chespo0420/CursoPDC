@@ -32,7 +32,7 @@ public class PEliculaService {
             System.out.println("Ingrese el Director de la Película");
             p1.setDirector(leer.nextLine());
             System.out.println("Ingrese la Duración de la Película(HS)");
-            p1.setDuracion(leer.nextInt());
+            p1.setDuracion(leer.nextDouble());
             System.out.println("Quiere ingresar otra Pelicula? ingrese (S/N)");
             leer.nextLine();
             pelis.add(p1);
@@ -48,7 +48,7 @@ public class PEliculaService {
         boolean bandera=false;
         System.out.println("A continuacion las Peliculas de mayor duracion");
         for (Pelicula peli : pelis) {
-            if (peli.getDuracion() >= 1) {
+            if (peli.getDuracion() > 1) {
                 bandera = true;
                 System.out.println("Pelicula: " + peli.getTitulo() + ", -Director: " + peli.getDirector() + ", -Duracion :" + peli.getDuracion());
             }
@@ -67,8 +67,10 @@ public class PEliculaService {
 
     public void ordenar(ArrayList<Pelicula>pelis){
         Collections.sort(pelis,compelis);
-        Collections.reverse(pelis);
+        /*Collections.reverse(pelis);*/
         System.out.println("pelis: "+pelis);
     }
-    
+    public void ordenarTitulo(ArrayList<Pelicula>pelis){
+        
+    }
  }

@@ -11,13 +11,13 @@ package Entidades;
  */
 public class Pelicula {
     private String titulo,director;
-    private Integer duracion;
+    private Double duracion;
     
 public Pelicula() {
        
     }
 
-    public Pelicula(String titulo, String director, Integer duracion) {
+    public Pelicula(String titulo, String director, Double duracion) {
         this.titulo = titulo;
         this.director = director;
         this.duracion = duracion;
@@ -40,11 +40,11 @@ public Pelicula() {
         this.director = director;
     }
 
-    public Integer getDuracion() {
+    public Double getDuracion() {
         return duracion;
     }
 
-    public void setDuracion(Integer duracion) {
+    public void setDuracion(Double duracion) {
         this.duracion = duracion;
     }
 
