@@ -1,0 +1,33 @@
+<project default="compile">
+    <target name="compile">
+        <javac srcdir="src" debug="true"/>
+    </target>
+
+    <target name="run" depends="compile">
+
+        <java classname="com.gui.mainGUI" fork="true">
+        <classpath>
+            <path location="src" />
+        </classpath>
+        </java>
+
+    </target>
+
+    <target name="test">
+        <junit printsummary="yes" fork="yes" haltonfailure="yes">
+            <classpath location="/Applications/IntelliJ IDEA CE.app/Contents/lib/junit-4.12.jar" />
+            <classpath location="/Applications/IntelliJ IDEA CE.app/Contents/lib/hamcrest-core-1.3.jar" />
+            <formatter type="plain"/>
+            <formatter type="xml" />
+
+            <batchtest fork="yes" todir="/Users/yehray/IdeaProjects/yugioh/test">
+                <fileset dir="/Users/yehray/IdeaProjects/yugioh/test">
+                    <include name="/Users/yehray/IdeaProjects/yugioh/test/com/Tests.java" />
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+
+
+</project>

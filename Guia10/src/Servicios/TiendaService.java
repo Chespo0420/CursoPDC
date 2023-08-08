@@ -18,6 +18,7 @@ public class TiendaService {
     public void CrearProducto(HashMap<String, Double> producto) {
 
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        
         do {
             Tienda tienda = new Tienda();
             System.out.println("Ingrese un Articulo");
